@@ -27,7 +27,6 @@ function processGuess(){
     console.log("Getting form values")
     secret = document.getElementById("form1_secret").value
     guess = document.getElementById("form1_guess").value
-    //confirmed = confirm("Are these the values? "+age+" and "+nick)
     
     out = document.getElementById("result")
     if(secret == guess){
@@ -42,6 +41,30 @@ function processGuess(){
 }
 </script>
 
-
+<div class="container">
+    <img id="Plant" src="GARDENIA.jpg" alt="gardenia plant" width="200" height="200" onclick="rotateImage()">
+</div>
+<script>
+    var currentImage = 0;
+    function rotateImage(){
+        switch(currentImage){
+            case 0: 
+                currentImage+=1;
+                document.getElementById("Plant").src = "GARDENIA.jpg"
+                break;
+            case 1:
+                currentImage+=1;
+                document.getElementById("Plant").src = "UMBRELLAPINE.jpg"
+                break;
+            case 2:
+                currentImage+=1;
+                document.getElementById("Plant").src = "LADYBELLS.jpg"
+                break;
+            default:
+                currentImage = 0
+                document.getElementById("Plant").src = "GARDENIA.jpg"
+        }
+    }
+</script>
 </body>
 </html> 
