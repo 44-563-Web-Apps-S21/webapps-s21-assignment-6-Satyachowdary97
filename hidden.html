@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
- <head>
-     <title>Hidden Things</title>
- </head>
+<head>
+<title>Hidden Things</title>
+</head>
 <body>
 
 <h2>Hidden things by Sai Satyanarayana Gullapalli</h2>
 
 <form>
-    <label for="form1_secret">Enter the secret word</label>
-    <input type ="password" id="form1_secret" name="form1_secret" min=10 max=50 step=2 value="Secret"> <br>
+<label for="form1_secret">Enter the secret word</label>
+<input type ="password" id="form1_secret" name="form1_secret" min=10 max=50 step=2 value="Secret"> <br>
 
-    <label for="form1_guess">Enter a guess </label>
-    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
+<label for="form1_guess">Enter a guess </label>
+<input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
 
-    <input type="button" onclick="processGuess()" value="Check the guess">
+<input type="button" onclick="processGuess()" value="Check the guess">
 </form>
 
 
@@ -24,47 +24,48 @@
 var correct = 0;
 var wrong= 0;
 function processGuess(){
-    console.log("Getting form values")
-    secret = document.getElementById("form1_secret").value
-    guess = document.getElementById("form1_guess").value
+console.log("Getting form values")
+secret = document.getElementById("form1_secret").value
+guess = document.getElementById("form1_guess").value
     
-    out = document.getElementById("result")
-    if(secret == guess){
-        correct+=1;
-        alert("Congratulations");
-        out.innerHTML = "Success Attempts: " + correct
-    } else {
-        wrong+=1;
-        alert("Sorry");
-        out.innerHTML = "Wrong Attempts: " + wrong
-    }
+out = document.getElementById("result")
+if(secret == guess){
+correct+=1;
+alert("Congratulations");
+out.innerHTML = "Success Attempts: " + correct
+} else {
+wrong+=1;
+alert("Sorry");
+out.innerHTML = "Wrong Attempts: " + wrong
+}
 }
 </script>
 
 <div class="container">
-    <img id="Plant" src="GARDENIA.jpg" alt="gardenia plant" width="200" height="200" onclick="rotateImage()">
+<img id="Plant" src="GARDENIA.jpg" alt="gardenia plant" width="200" height="200" onclick="rotateImage()">
 </div>
+
 <script>
-    var currentImage = 0;
-    function rotateImage(){
-        switch(currentImage){
-            case 0: 
-                currentImage+=1;
-                document.getElementById("Plant").src = "GARDENIA.jpg"
-                break;
-            case 1:
-                currentImage+=1;
-                document.getElementById("Plant").src = "UMBRELLAPINE.jpg"
-                break;
-            case 2:
-                currentImage+=1;
-                document.getElementById("Plant").src = "LADYBELLS.jpg"
-                break;
-            default:
-                currentImage = 0
-                document.getElementById("Plant").src = "GARDENIA.jpg"
-        }
-    }
+var currentImage = 0;
+function rotateImage(){
+switch(currentImage){
+case 0: 
+currentImage+=1;
+document.getElementById("Plant").src = "GARDENIA.jpg"
+break;
+case 1:
+currentImage+=1;
+document.getElementById("Plant").src = "UMBRELLAPINE.jpg"
+break;
+case 2:
+currentImage+=1;
+document.getElementById("Plant").src = "LADYBELLS.jpg"
+break;
+default:
+currentImage = 0
+document.getElementById("Plant").src = "GARDENIA.jpg"
+}
+}
 </script>
 </body>
 </html> 
